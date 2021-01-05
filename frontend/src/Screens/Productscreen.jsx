@@ -4,8 +4,7 @@ import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap'
 import Rating from '../Components/Rating'
 import { useState , useEffect} from 'react'
 const Productscreen = ({match}) => {
-    const [product, setProduct] = useState({})
-    
+    const [product, setProduct] = useState({})   
     useEffect(() => {
         fetch(`/api/products/${match.params.id}`).then(res => res.json()).then(res => setProduct(res))
     })
